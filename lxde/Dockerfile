@@ -29,6 +29,11 @@ RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSep
 RUN sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
 RUN sed -i "s/#PasswordAuthentication/PasswordAuthentication/g" /etc/ssh/sshd_config
 
+# create user here, so that we can create user specific configurations in inherited docker files
+RUN adduser --disabled-password --UID 2000 --gecos "" dockerx 
+RUN adduser dockerx sudo
+RUN adduser dockerx x2gouser
+
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 ADD chrome.sh /chrome.sh
