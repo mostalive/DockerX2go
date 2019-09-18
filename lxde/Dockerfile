@@ -17,6 +17,7 @@ RUN apt-get install -y \
     sudo           \
     openssh-server \
     lxde \
+    lxsession-logout \
     software-properties-common \
     python-software-properties
 
