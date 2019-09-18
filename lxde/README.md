@@ -1,10 +1,17 @@
 
-#DockerX2go
+# DockerX2go 
 ==========
 
 LXDE with X2go preinstalled.
 
+Based on Ubuntu 16.04
 
+_Known issues:_
+- when opening a session in the container, the message 'No session for pid ...'  is given. 
+  This is a known issue in lightdm which has not been resolved yet and for which there is not a good workaround).
+  See: https://bugs.launchpad.net/ubuntu/+source/lxsession/+bug/1273524
+- default LXDE background image is not shown
+  
 ### How to run a server?
 
 Pull from Docker Index and run the image
@@ -50,10 +57,10 @@ users dockerx can be used to login however for some reason you need to use root 
 ssh root@dockerhost -p 2222
 ```
 
-###Credits:
+### Credits:
 
-####http://bmullan.wordpress.com/
-####https://github.com/rogaha/docker-desktop
-####https://github.com/tutumcloud/tutum-ubuntu
+#### http://bmullan.wordpress.com/
+#### https://github.com/rogaha/docker-desktop
+#### https://github.com/tutumcloud/tutum-ubuntu
 
 #### Docker.io && x2go.org
