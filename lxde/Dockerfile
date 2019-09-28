@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -17,8 +17,7 @@ RUN apt-get install -y \
     sudo           \
     openssh-server \
     lxde \
-    software-properties-common \
-    python-software-properties
+    software-properties-common
 
 RUN add-apt-repository ppa:x2go/stable
 
