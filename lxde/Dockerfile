@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -17,7 +17,7 @@ RUN apt-get install -y \
     sudo           \
     openssh-server \
     lxde \
-    lxsession-logout \
+    software-properties-common
     software-properties-common \
     python-software-properties
 
