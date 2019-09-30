@@ -18,6 +18,8 @@ RUN apt-get install -y \
     openssh-server \
     lxde \
     software-properties-common
+    software-properties-common \
+    python-software-properties
 
 RUN add-apt-repository ppa:x2go/stable
 
